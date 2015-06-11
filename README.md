@@ -6,6 +6,8 @@ Helpers for getting started when I need a NIF setup for a project.
 ## Install 
 
 ```elixir 
+git clone git@github.com:rossjones/nifty.git
+cd nifty 
 mix do archive.build, archive.install
 ```
 
