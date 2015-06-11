@@ -14,16 +14,8 @@ mix do archive.build, archive.install
 ## Commands
 
 ```elixir 
-# Run make using the Makefile in the current directory
-mix make
-```
-
-```elixir 
-# Run make clean using the Makefile in the current directory
-mix make.clean
-```
-
-```elixir 
 # Creates a skeleton Makefile, c source and Elxiir module.
 mix make.gen NAME
 ```
+
+The compile and clean tasks should happen when your normal ```mix compile``` and ```mix clean``` calls happen.
