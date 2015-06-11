@@ -19,3 +19,8 @@ mix make.gen NAME
 ```
 
 The compile and clean tasks should happen when your normal ```mix compile``` and ```mix clean``` calls happen.
+
+
+## Extra info
+
+How to set up compilation for make was found at <http://spin.atomicobject.com/2015/03/16/elixir-native-interoperability-ports-vs-nifs/#comment-531191>  which was very helpful in getting started. 
