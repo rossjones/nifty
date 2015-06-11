@@ -23,4 +23,4 @@ The compile and clean tasks should happen when your normal ```mix compile``` and
 
 ## Extra info
 
-How to set up compilation for make was found at <http://spin.atomicobject.com/2015/03/16/elixir-native-interoperability-ports-vs-nifs/#comment-531191>  which was very helpful in getting started.
+How to set up compilation for make was found at <http://spin.atomicobject.com/2015/03/16/elixir-native-interoperability-ports-vs-nifs/#comment-531191>  which was very helpful in getting started. The mix tasks are derived from <https://github.com/asbaker/elixir-interop-examples/tree/master/serial_nif>

@@ -17,7 +17,7 @@ defmodule Nifty.Mixfile do
   defp package do
     [files: ["lib", "mix.exs", "README.md", "LICENSE"],
      contributors: ["Ross Jones"],
-     licenses: ["Apache 2.0"],
+     licenses: ["MIT"],
      links: %{
        github: "https://github.com/rossjones/nifty",
      }]
