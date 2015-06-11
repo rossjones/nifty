@@ -60,8 +60,13 @@ defmodule Mix.Tasks.Make.Gen do
   end
 
   def write_file_iff(filename, contents) do
-    {:ok, file} = File.open filename, [:write]
-    IO.binwrite file, contents
-    File.close file
+    case File.exists?(filename) do
+      true ->
+        IO.puts "Skipping creation of #{filename} as it already exists"
+      false ->
+        {:ok, file} = File.open filename, [:write]
+        IO.binwrite file, contents
+        File.close file
+    end
   end
 end

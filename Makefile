@@ -9,9 +9,9 @@ ifneq ($(OS),Windows_NT)
 	endif
 endif
 
-priv/lib_sample.so: clean
+priv/lib/lib_sample.so: clean
 	@$(CC) $(CFLAGS) -shared $(LDFLAGS) -o $@ c_src/sample_nif.c
 
 clean:
-	@$(RM) -r priv/*
+	@$(RM) -r priv/lib/*
 
