@@ -36,7 +36,7 @@ defmodule Mix.Tasks.Make.Gen do
   """
   def run(args) do
     name = hd(args)
-    ["c_src", "priv"] |> Enum.each( &File.mkdir/1 )
+    ["c_src", "priv/lib"] |> Enum.each( &File.mkdir_p/1 )
 
     write_file_iff("c_src/#{name}_nif.c", Nifty.Template.nif(name))
     write_file_iff("Makefile", Nifty.Template.makefile(name))
@@ -45,7 +45,7 @@ defmodule Mix.Tasks.Make.Gen do
     Mix.Tasks.Make.run("")
 
     IO.puts """
-      Don't forget to add the following to your mix.Executes
+      Don't forget to add the following to your mix.exs
 
         defp aliases do
           [clean: ["clean", "make.clean"]]

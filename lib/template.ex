@@ -3,10 +3,14 @@ defmodule Nifty.Template do
   def elixir_nif(name) do
     """
   defmodule NIF do
+      # When your move/rename this file (and you should) make sure
+      # you also change the ERL_NIF_INIT call at the bottom of
+      # c_src/#{name}_nif.c
+
       @on_load :init
 
       def init do
-        :erlang.load_nif("./priv/lib_#{name}", 0)
+        :erlang.load_nif("./priv/lib/lib_#{name}", 0)
       end
 
       # A simple wrapper around the NIF call
@@ -68,11 +72,11 @@ ifneq ($(OS),Windows_NT)
 \tendif
 endif
 
-priv/lib_#{name}.so: clean
+priv/lib/lib_#{name}.so: clean
 \t@$(CC) $(CFLAGS) -shared $(LDFLAGS) -o $@ c_src/#{name}_nif.c
 
 clean:
-\t@$(RM) -r priv/*
+\t@$(RM) -r priv/lib/*
 
     """
   end
