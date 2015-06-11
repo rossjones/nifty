@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.Make do
+defmodule Mix.Tasks.Compile.Make do
   @shortdoc "Runs make to execute the Makefile in the current directory"
 
   @doc """
@@ -13,7 +13,7 @@ defmodule Mix.Tasks.Make do
   end
 end
 
-defmodule Mix.Tasks.Make.Clean do
+defmodule Mix.Tasks.Clean.Make do
   @shortdoc "Executes make clean"
 
   @doc """
@@ -42,13 +42,13 @@ defmodule Mix.Tasks.Make.Gen do
     write_file_iff("Makefile", Nifty.Template.makefile(name))
     write_file_iff("lib/nif.ex", Nifty.Template.elixir_nif(name))
 
-    Mix.Tasks.Make.run("")
+    Mix.Tasks.Compile.Make.run("")
 
     IO.puts """
       Don't forget to add the following to your mix.exs
 
         defp aliases do
-          [clean: ["clean", "make.clean"]]
+          [clean: ["clean", "clean.make"]]
         end
 
         # Add to your project function
