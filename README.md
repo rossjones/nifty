@@ -3,19 +3,19 @@ Nifty
 
 Helpers for getting started when I need a NIF setup for a project.
 
-## Install 
+## Install
 
-```elixir 
+```elixir
 git clone git@github.com:rossjones/nifty.git
-cd nifty 
+cd nifty
 mix do archive.build, archive.install
 ```
 
 ## Commands
 
-```elixir 
+```elixir
 # Creates a skeleton Makefile, c source and Elxiir module.
-mix make.gen NAME
+mix nifty.gen NAME
 ```
 
 The compile and clean tasks should happen when your normal ```mix compile``` and ```mix clean``` calls happen.
@@ -23,4 +23,4 @@ The compile and clean tasks should happen when your normal ```mix compile``` and
 
 ## Extra info
 
-How to set up compilation for make was found at <http://spin.atomicobject.com/2015/03/16/elixir-native-interoperability-ports-vs-nifs/#comment-531191>  which was very helpful in getting started. 
+How to set up compilation for make was found at <http://spin.atomicobject.com/2015/03/16/elixir-native-interoperability-ports-vs-nifs/#comment-531191>  which was very helpful in getting started.

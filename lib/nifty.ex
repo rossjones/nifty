@@ -28,8 +28,8 @@ defmodule Mix.Tasks.Clean.Make do
 end
 
 
-defmodule Mix.Tasks.Make.Gen do
-  @shortdoc "Generates a sample Makefile"
+defmodule Mix.Tasks.Nifty.Gen do
+  @shortdoc "Creates some boilerplate"
 
   @doc """
   Generates a sample makefile which is written to stdout
