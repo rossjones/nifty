@@ -3,4 +3,4 @@
 erl_crash.dump
 *.ez
 c_src/
-priv/
+priv/lib/
