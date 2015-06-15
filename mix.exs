@@ -3,7 +3,7 @@ defmodule Nifty.Mixfile do
 
   def project do
     [app: :nifty,
-     version: "0.0.1",
+     version: "0.0.2",
      description: description,
      elixir: "~> 1.0",
      name: "Nifty",
@@ -32,7 +32,9 @@ defmodule Nifty.Mixfile do
     A semi-useful tool to generate boilerplate when you want to
     use a NIF in your project. You don't really want to use a NIF
     in your project, until you do. Then this might save you writing
-    all the boilerplate. Perhaps.
+    most of the boilerplate.
+
+          mix nifty.gen --library hello --module MyApp.NIF
     """
   end
 

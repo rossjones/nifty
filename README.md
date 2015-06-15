@@ -1,7 +1,7 @@
 Nifty
 =====
 
-Helpers for getting started when I need a NIF setup for a project.
+Helper script for setting up the boilerplate required when writing a NIF. I'm using it by installing as an archive, but I guess you *could* install it as a dep.
 
 ## Install
 
@@ -15,7 +15,7 @@ mix do archive.build, archive.install
 
 ```elixir
 # Creates a skeleton Makefile, c source and Elxiir module.
-mix nifty.gen NAME
+mix nifty.gen --library hello --module MyApp.Nif
 ```
 
 The compile and clean tasks should happen when your normal ```mix compile``` and ```mix clean``` calls happen.
