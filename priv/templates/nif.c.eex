@@ -22,4 +22,4 @@ static ErlNifFunc nif_funcs[] =
 };
 
 /* Change Elixir.NIF to the name you use in the project */
-ERL_NIF_INIT(Elixir.NIF,nif_funcs,NULL,NULL,NULL,NULL)
+ERL_NIF_INIT(Elixir.<%= mod %>,nif_funcs,NULL,NULL,NULL,NULL)

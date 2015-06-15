@@ -1,4 +1,4 @@
-defmodule NIF do
+defmodule <%= mod %> do
     # When your move/rename this file (and you should) make sure
     # you also change the ERL_NIF_INIT call at the bottom of
     # c_src/#{name}_nif.c
