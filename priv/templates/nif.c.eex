@@ -5,20 +5,18 @@
 #endif
 
 #include "erl_nif.h"
-
 #include <stdio.h>
 #include <strings.h>
 #include <unistd.h>
 
-
 static ERL_NIF_TERM _hello(ErlNifEnv* env, int UNUSED(arc), const ERL_NIF_TERM UNUSED(argv[]))
 {
-      return enif_make_double(env, 0.0);
+    return enif_make_double(env, 0.0);
 }
 
 static ErlNifFunc nif_funcs[] =
 {
-      {"_hello", 0, _hello, 0}
+    {"_hello", 0, _hello, 0}
 };
 
 /* Change Elixir.NIF to the name you use in the project */

@@ -9,8 +9,8 @@ ifneq ($(OS),Windows_NT)
 	endif
 endif
 
-priv/lib/lib_<%= name %>.so: clean
+priv/lib_<%= name %>.so: clean
 	@$(CC) $(CFLAGS) -shared $(LDFLAGS) -o $@ c_src/<%= name %>_nif.c
 
 clean:
-	@$(RM) -r priv/lib/*
+	@$(RM) -r priv/*
