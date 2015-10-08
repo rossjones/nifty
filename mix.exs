@@ -3,7 +3,7 @@ defmodule Nifty.Mixfile do
 
   def project do
     [app: :nifty,
-     version: "0.0.2",
+     version: "0.0.3",
      description: description,
      elixir: "~> 1.0",
      name: "Nifty",
