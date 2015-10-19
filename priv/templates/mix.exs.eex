@@ -14,7 +14,7 @@ defmodule Mix.Tasks.Compile.<%= name %> do
         :ok -> nil
         _ -> IO.binwrite "Unknown error at Mix.Tasks.Compile.<%= name %>.run.File.cd\n"
       end
-      {result, _error_code} = System.cmd("cmake", ["-GVisual Studio 14 Win64", "-DCMAKE_INSTALL_PREFIX=..", ".."], stderr_to_stdout: true)
+      {result, _error_code} = System.cmd("cmake", ["-GVisual Studio 14 Win64", "-DCMAKE_INSTALL_PREFIX=..", starting_dir], stderr_to_stdout: true)
       IO.binwrite result
       {result, _error_code} = System.cmd("cmake", ["--build", ".", "--target", "install", "--config", "Release"], stderr_to_stdout: true)
       IO.binwrite result
